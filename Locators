@@ -1,0 +1,37 @@
+---Locators---
+
+-Coordinates to identify web elements in a web page
+
+Types of locators
+
+ID-Identifying an elements based on its ID
+
+Xpath-query language like sql but for retrieving notes from xml documents
+
+CssLocator-Is a strategy of identifying web elements through its css properties
+
+ClassName-Identify elements by the name of the class
+
+TagName-Identify elements by the name
+
+LinkText
+
+code
+  //Locators
+        //IdF
+        Long start = System.currentTimeMillis();
+        driver.findElement(By.id("js-link-box-en"));
+        Long end = System.currentTimeMillis();
+        System.out.println("The time needed to get a locator by ID is :" + (end - start));
+
+        //Xpath
+        Long start1 = System.currentTimeMillis();
+        driver.findElement(By.xpath("//*[@id=\"www-wikipedia-org\"]/div[2]/div[3]"));
+        Long end1 = System.currentTimeMillis();
+        System.out.println("The time needed to get a locator by ID is :" + (end1 - start1));
+
+        //Css Selector
+        Long start2 = System.currentTimeMillis();
+        driver.findElement(By.cssSelector("#www-wikipedia-org > div.central-featured > div.central-featured-lang.lang3"));
+        Long end2 = System.currentTimeMillis();
+        System.out.println("The time needed to get a locator by ID is :" + (end2 - start2));

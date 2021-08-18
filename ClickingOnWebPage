@@ -1,0 +1,19 @@
+ WebElement englishbutton= driver.findElement(By.id("js-link-box-en"));
+
+        englishbutton.click();
+
+        WebElement titleOfEnglishPage= driver.findElement(By.id("mp-welcome"));
+        String titleEnglish=titleOfEnglishPage.getText();
+
+        String expectedText="Welcome to Wikipedia,";
+
+
+        if(expectedText.equals(titleEnglish)){
+
+            System.out.println("Test Passed");
+        }else{
+
+            System.out.println("Test Failed");
+            driver.close();
+            throw new Exception();
+        }
