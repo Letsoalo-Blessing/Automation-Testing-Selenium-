@@ -17,6 +17,16 @@ public class App {
         //Opening a website- Invoke the object of the driver and call method get
         driver.get("http://localhost:63342/LastEdit/Table.html?_ijt=9h70v5rugkvdo2gsjh3hh6dbq7");
 
+        //Send Text to a WebPage
+        //Web Element to send text
+        WebElement searchBox=driver.findElement(By.id("searchInput"));
+        String searchStr="Selenium Webdriver";
+        searchBox.sendKeys(searchStr);
+
+        //Action to click on search
+
+        WebElement searchbutton= driver.findElement(By.cssSelector("#search-form > fieldset > button"));
+        searchbutton.click();
 
         driver.close();
 
