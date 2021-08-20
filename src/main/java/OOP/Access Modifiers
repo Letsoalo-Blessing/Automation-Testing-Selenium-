@@ -1,0 +1,9 @@
+
+Access Modifiers are used to set accessibility of classes, interfaces, variables, methods
+
+There are four access modifiers keywords in java
+
+1.Default- declarations are visible only within the package
+2.Private- declarations are only visible within the class only
+3.Protected- declarations are visible within package or all subclasses
+4.Public-declarations are visible everywhere
