@@ -1,7 +1,12 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.util.concurrent.TimeUnit;
 
 public class App {
@@ -9,24 +14,36 @@ public class App {
 
         //Instantiating a web driver with a chrome driver
         WebDriver driver = new ChromeDriver();
+
         //Define where ChromeDriver is located
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+
+        //Implicit Wait
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+
         //Best practice is to maximise so that it can find all the elements
         driver.manage().window().maximize();
+
+
         //Opening a website- Invoke the object of the driver and call method get
-        driver.get("http://localhost:63342/LastEdit/Table.html?_ijt=9h70v5rugkvdo2gsjh3hh6dbq7");
+        driver.get("https://www.wikipedia.org/");
 
-        //Send Text to a WebPage
-        //Web Element to send text
-        WebElement searchBox=driver.findElement(By.id("searchInput"));
-        String searchStr="Selenium Webdriver";
-        searchBox.sendKeys(searchStr);
 
-        //Action to click on search
+        System.out.println(driver.getTitle());
 
-        WebElement searchbutton= driver.findElement(By.cssSelector("#search-form > fieldset > button"));
-        searchbutton.click();
+        //Explicit Wait
+        WebDriverWait wait=new WebDriverWait(driver, 10);
+
+
+        //Fluent Wait
+        Wait Fluentwait=new FluentWait<WebDriver>(driver)
+                .withTimeout(15,TimeUnit.SECONDS)
+                .pollingEvery(5,TimeUnit.SECONDS)
+                .ignoring(NoSuchElementException.class);
+
+
+        
 
         driver.close();
 

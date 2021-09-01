@@ -1,0 +1,78 @@
+
+What is Automation Testing
+-Automation Testing- is a process of automating a manual testing process of an application or system by using testing tools
+                    that allow you to create scripts that can be executed repeatedly,generating test reports of the application
+                    under test
+
+Advantages of Automated tests
+-It supports both the performance and functional testing of an application or system
+-It allows parallel execution of test cases
+-It improves accuracy and efficiency of the system by reducing the manual intervention of human generate test cases
+-It facilitates the execution of the test cases
+-It helps in testing a large scale test matrix
+-It saves valuable time and money for the testing team involved in project
+
+why should selenium be selected as a testing tool for web application or systems
+-It is free and open-source software with a large user base and supports providing community
+-It has cross browser compatibility and supports multiple browsers e.g Chrome,FireFox,IE,Safari
+-It supports multiple operating systems
+-It facilitates the usages of multiple programming languages
+-It provides support for distributed testing as well
+
+Disadvantages of using Selenium as a testing tool
+-Tests web applications only
+-No built-in reporting and test management facility-Selenium can generate reports only using third party tools TestNG
+-Unavailability of reliable tech support
+-May require the knowing the programming languages
+
+What is Selenium Suite and what are its different components
+-Selenium is a package of several testing tools and therefore often referred to as a Selenium Suite with each these tools
+designed to cater to a different testing requirements
+
+Different Components of Selenium Suite
+-Selenium Integrated Development Environment(IDE)-It is a FireFox/Chrome plug-in that is developed to speed up the creation
+of automation scripts by recording the user actions on the web browser and exporting them as a reusable script
+-Selenium Remote Control(RC)It is a server that enables users to generate test scripts in their preferred programming
+languages
+-Selenium WebDriver-It a programming interface that helps create and run test cases by directly communicating with the web
+browser and using its native compatibility to automate.It not require additional server to create and run test cases.
+-Selenium Grid-It allows parallel execution of tests on different browsers and operating systems
+
+Selenium Commands
+
+1. Actions-These are the commands interacting directly with web applications
+2. Accessors-These are the commands that allow users to store values to a user-defined variable
+3. Assertions-They enable a comparison of the current state of the application with its expected state
+
+What is meant by locators
+-A locator is an address for uniquely identifying web elements within a web page
+
+Types of locators
+-ID
+-ClassName
+-Name
+-TagName
+-LinkText
+-Xpath
+-CSS Selector
+-DOM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
