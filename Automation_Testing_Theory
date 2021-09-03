@@ -57,6 +57,30 @@ Types of locators
 -CSS Selector
 -DOM
 
+Difference between "Assert" and "Verify" commands in Selenium
+Both "assert" and "verify" commands check whether the given condition is true or false and the only difference between
+
+-Assert-assert condition stops the execution of the testing if the given condition is false else would continue with
+        further tests
+-Verify-Verify the condition doesn't stop the flow of execution irrespective of the condition being true or false
+
+What is exception test in Selenium
+An exception test is a test expects an exception to be thrown inside a test class.It expect a @Test annotation
+
+e.g @Test(expectedException = NoSuchElementException.class)
+
+Commands that can be used to launch web browsers using Selenium
+-WebDriver driver=new FirefoxDriver();
+-WebDriver driver=new ChromeDriver();
+-WebDriver driver=new InternetExplorerDriver();
+
+Difference between driver.close() and driver.quit() commands in Selenium
+
+-driver.close() command closes the currently active window on which the user is working or the window being currently
+accessed by the web driver
+-driver.quit() command, unlike the driver.close() command closes all the window opened by the program and hence should
+be used with care
+*Both commands don't take any parameters nor return values
 
 
 
